@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login-form {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-cont {
+    height: 100vh;
+    width: 100vw;
+}
+form {
+   height: 15rem;
+   width: 20rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: center; */
+   border: 1px solid grey;
+   gap: 2rem;
+   padding: 1rem;
+   font-size: 1.2rem;
+}
+form input {
+    padding: 5px;
+}
+.btn {
+    padding: 10px;
+    background-color: rgb(129, 129, 250);
+    color: white;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.header {
+    height: 3rem;
+    width: 100%;
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.logo {
+    transform: translateX(3rem);
+}
+.logo img {
+    height: 3rem;
+    width: 3rem;
+}
+.elems {
+    transform: translateX(-3rem);
+    display: flex;
+    gap: 3rem;
+    font-size: 1.2rem;
+}
+.elems > * {
+    cursor: pointer;
+}
+.elems > *:hover {
+    color: brown;
+}
+
+/* img slider */
+.img-slide-cont {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 1rem;
+   gap: 2rem;
+}
+
+.img-slide {
+    height: 20rem;
+    width: 20rem;
+    overflow: hidden;
+    position: relative;
+}
+.sliding-img {
+    height: 20rem;
+    width: 25rem;
+    position: absolute;
+}
+.addmission-cont {
+    overflow: hidden;
+    /* transform: translateX(20rem);
+    padding: 0;
+    margin: 1.5rem; */
+}
+.addmission {
+    margin: 4rem;
+}
+
+.student-info {
+    margin-left: 5rem;
+}
+.all-btns {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.list-heading {
+    width: 25rem;
+    background-color: rgb(248, 238, 194);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    color: rgb(137, 137, 247);
+    padding: 1rem;
+}
+.student-data {
+    width: 25rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+}
+.class-1, .class-2, .class-3, .class-4 {
+    width: 25rem;
+    padding: 1rem;
+    background-color: rgb(248, 238, 194);
+    margin-bottom: 1rem;
+}
+.class-4 {
+    position: absolute;
+}
+.class-2 {
+    position: absolute;
+  
+}
+.class-3 {
+    position: absolute;
+}
+.class-1 {
+    position: absolute;
+}
+
+
