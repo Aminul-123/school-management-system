@@ -180,14 +180,32 @@ form input {
 .single-qna {
     margin: 1rem;
 }
+.side-menu-btn {
+    display: none;
+}
 
 @media only screen and (max-width: 600px) {
     body {
         background-color: rgb(250, 236, 186);
     }
+       .accordions-cont {
+        top: 27rem;
+    }
+    .side-menu-btn {
+        display: block;
+        position: absolute;
+        transform: translate(4rem, 4.5rem);
+        color: white;
+        opacity: 100;
+    }
     .elems {
         display: none;
-    }
+        flex-direction: column; 
+        background-color: white;
+        color: blueviolet; 
+        transform: translate(-0.5rem, 6.5rem);
+        padding: 1rem;
+  }
     p {
         font-size: 17px; 
     }
