@@ -50,14 +50,21 @@ export const class4 = [
     { id: 39, name: "Mia Hughes", roll_no: "A039" },
     { id: 40, name: "Nolan Fisher", roll_no: "A040" },
 ]
-//   { id: 41, name: "Olivia Graham", roll_no: "A041" },
-//   { id: 42, name: "Pete Nelson", roll_no: "A042" },
-//   { id: 43, name: "Quinn Torres", roll_no: "A043" },
-//   { id: 44, name: "Ruby Flores", roll_no: "A044" },
-//   { id: 45, name: "Sean Price", roll_no: "A045" },
-//   { id: 46, name: "Tara Reed", roll_no: "A046" },
-//   { id: 47, name: "Uma Barnes", roll_no: "A047" },
-//   { id: 48, name: "Vince Watson", roll_no: "A048" },
-//   { id: 49, name: "Wendy Ross", roll_no: "A049" },
-//   { id: 50, name: "Xavier Foster", roll_no: "A050" }
-// ];
+ export const questionArrAccordion = [
+    {
+        q: 'What is the total available seats in each class ?',
+        ans : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut autem sint, itaque repellat quibusdam iure nisi sed quo iusto aperiam fuga sunt obcaecati recusandae? Exercitationem tempora omnis eaque quasi sit.'
+    },
+    {
+        q: 'What is the addmission Process ?',
+        ans : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut autem sint, itaque repellat quibusdam iure nisi sed quo iusto aperiam fuga sunt obcaecati recusandae? Exercitationem tempora omnis eaque quasi sit.'
+    },
+    {
+        q: 'When addmission Started ?',
+        ans : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut autem sint, itaque repellat quibusdam iure nisi sed quo iusto aperiam fuga sunt obcaecati recusandae? Exercitationem tempora omnis eaque quasi sit.'
+    },
+    {
+        q: 'How many staff do we have ?',
+        ans : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut autem sint, itaque repellat quibusdam iure nisi sed quo iusto aperiam fuga sunt obcaecati recusandae? Exercitationem tempora omnis eaque quasi sit.'
+    },
+]

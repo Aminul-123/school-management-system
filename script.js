@@ -1,5 +1,5 @@
 
-import { class1, class2 , class3, class4 } from "./students.js"
+import { class1, class2 , class3, class4, questionArrAccordion } from "./students.js"
 //element selectors
 const form = document.querySelector('form')
 
@@ -38,6 +38,8 @@ const _class1 = document.querySelector('.class-1')
 const _class2 = document.querySelector('.class-2')
 const _class3 = document.querySelector('.class-3')
 const _class4 = document.querySelector('.class-4')
+//accordions
+const accordions = document.querySelector('.accordions');
 
 const loginState = {
     name : '',
@@ -65,14 +67,15 @@ loginBtn.addEventListener('click', (e) => {
 
     if (loginState.name === 'Alex' || loginState.id === '222' || loginState.password=== '222' ) {
         alert('Login Successful')
-        loginForm.classList.add('hide') 
+        loginForm.classList.add('hide')
+        document.querySelector('.main-cont').classList.toggle('hide'); 
     } else {
         alert('Login Failed !');
     } 
 })
-// setTimeout(function () {
-//     alert('By Default our application uses a fake authentication, so use name : alex , id: 123 and password : 222')
-// }, 5000)
+setTimeout(function () {
+    alert('By Default our application uses a fake authentication, so use name : alex , id: 123 and password : 222')
+}, 2000)
 
 //img slider
 const prev = document.querySelector('.prev')
@@ -107,7 +110,6 @@ const slideImgFunc = function () {
         elem.style.transform = `translateX(-${counter * 25}rem)`
     })
 }
-// let displayImg = imgArr[0] ;
 next.addEventListener('click', () => {
     slideImgFunc()
     if(counter < 5) {
@@ -152,7 +154,6 @@ const setZ_IndexToZero = function (first, sec, third, firstBtn, secBtn, thirdBtn
     secBtn.style.backgroundColor = 'rgb(129, 129, 250)'
     thirdBtn.style.backgroundColor = 'rgb(129, 129, 250)'
 }
-
 const btnClicked = function (b1, c1, c2, c3, c4, b2, b3, b4) {
     // b1 -> btn to apply
     //c1 -> class to  apply with respect to its btn
@@ -162,7 +163,6 @@ const btnClicked = function (b1, c1, c2, c3, c4, b2, b3, b4) {
         b1.style.backgroundColor = 'orange'
         //all other btns and classes to pass in the func below
         setZ_IndexToZero(c2, c3, c4, b2, b3, b4)
-
     })
 }
 
@@ -175,3 +175,32 @@ btnClicked(btn2, _class2, _class1, _class3, _class4, btn1, btn3, btn4 )
 btnClicked(btn3, _class3, _class1, _class2, _class4, btn1, btn2, btn4 )
 //for btn 4
 btnClicked(btn4, _class4,  _class1, _class2, _class3,  btn1, btn3, btn2)
+
+
+
+//accordions q and ans
+questionArrAccordion.forEach((question, idx) => {
+    const questionHtml = `<div class="single-qna">
+                        <p class="q"> <span> (${idx + 1}) </span> ${question.q} <span class='show-down'>   &#x25BC;  </span>
+                         <span class='show-up hide'>
+                           &#x25B2;
+                        </span> </p> 
+                        <p class="ans hide">Answer:  ${question.ans}</p>
+                    </div>`
+    accordions.insertAdjacentHTML('beforebegin', questionHtml)
+})
+
+const allAns = document.querySelectorAll('.ans');
+allAns[0].classList.remove('hide')
+
+
+function makeHidden (class_name, i) {
+        document.querySelectorAll(class_name)[i].classList.toggle('hide');
+}
+document.querySelectorAll('.q').forEach((elem, idx) => {
+    elem.addEventListener('click', () => {
+        makeHidden('.ans', idx)
+        makeHidden('.show-down', idx)
+        makeHidden('.show-up', idx)
+    })
+})
